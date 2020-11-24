@@ -1,0 +1,57 @@
+<nav class=" sidebar">
+  <div class="sidebar-sticky">
+    <ul class="nav flex-column menu">
+      <li class="nav-item" [class]="activePage === 'books' ? 'active' : ''">
+        <a class="nav-link" (click)="changePage('books')" routerLink="/books">
+          <i class="fas fa-book"></i>
+          Books
+        </a>
+      </li>
+      <li class="nav-item" [class]="activePage === 'authors' ? 'active' : ''">
+        <a class="nav-link" (click)="changePage('authors')" routerLink="/authors">
+          <i class="fas fa-pen"></i>Authors
+        </a>
+      </li>
+      <li class="nav-item" [class]="activePage === 'genres' ? 'active' : ''">
+        <a class="nav-link" (click)="changePage('genres')" href="#">
+          <i class="fas fa-puzzle-piece"></i>Genres
+        </a>
+      </li>
+      <li class="nav-item" [class]="activePage === 'users' ? 'active' : ''">
+        <a class="nav-link" href="#" (click)="changePage('users')"
+          ><i class="fas fa-users"></i>Users
+        </a>
+      </li>
+    </ul>
+
+    <h6
+      class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted"
+    >
+      <span class="sectionName">Edit</span>
+      <a class="d-flex align-items-center text-muted" href="#"> </a>
+    </h6>
+    <ul class="nav flex-column mb-2">
+      <li class="nav-item" [class]="activePage === 'addBook' ? 'active' : ''">
+        <a class="nav-link" href="#" (click)="changePage('addBook')">
+          <i class="fas fa-book-medical"></i>Add Book
+        </a>
+      </li>
+      <li
+        class="nav-item"
+        [class]="activePage === 'addAuthor' ? 'active' : ''"
+      >
+        <a class="nav-link" routerLink="/addAuthor" (click)="changePage('addAuthor')">
+          <i class="fas fa-user-plus"></i>Add Author
+        </a>
+      </li>
+      <li
+        class="nav-item"
+        [class]="activePage === 'addGenre' ? 'active' : ''"
+      >
+        <a class="nav-link" href="#" (click)="changePage('addGenre')">
+          <i class="fas fa-plus-circle"></i>Add Genre
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
