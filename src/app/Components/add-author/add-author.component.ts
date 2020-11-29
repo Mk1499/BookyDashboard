@@ -21,10 +21,7 @@ export class AddAuthorComponent implements OnInit {
   }
 
   addAuthor() {
-    console.log("authorName : ", this.authorName);
-    console.log("authorName : ", this.age);
-    console.log("authorName : ", this.bio);
-    console.log("authorName : ", this.avatarURL);
+
     this.apollo.mutate({
       mutation: addAuthor,
       variables: {
@@ -35,10 +32,10 @@ export class AddAuthorComponent implements OnInit {
       }
     }).subscribe(({ data }) => {
       console.log("Adding Author RES : ", data);
-      this.age = null; 
+      this.age = null;
       this.authorName = "";
-      this.bio=""; 
-      this.avatarURL=""; 
+      this.bio = "";
+      this.avatarURL = "";
       alert("Author Added Successfully");
     })
 

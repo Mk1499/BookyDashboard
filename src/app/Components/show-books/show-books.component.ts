@@ -10,7 +10,7 @@ import { getBooks } from '../../Queries/getBooks.query';
 })
 export class ShowBooksComponent implements OnInit {
 
-  loading: boolean;
+  loading: boolean = true;
   books: any[] = [];
   private querySubscription: Subscription;
 

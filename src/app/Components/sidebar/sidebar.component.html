@@ -32,7 +32,7 @@
     </h6>
     <ul class="nav flex-column mb-2">
       <li class="nav-item" [class]="activePage === 'addBook' ? 'active' : ''">
-        <a class="nav-link" href="#" (click)="changePage('addBook')">
+        <a class="nav-link" routerLink="/addBook" (click)="changePage('addBook')">
           <i class="fas fa-book-medical"></i>Add Book
         </a>
       </li>

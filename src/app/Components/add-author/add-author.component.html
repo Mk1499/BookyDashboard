@@ -12,6 +12,13 @@
     <div class="form-group">
         <textarea class="form-control input" placeholder="Bio" name="bio" [(ngModel)]="bio" rows="3"></textarea>
     </div>
+    <div class="card authorView text-center" style="width: 18rem">
+      <img class="card-img-top cover" [src]="avatarURL" />
+      <div class="card-body">
+        <p class="card-text">{{ authorName }}</p>
+        <p class="card-text">{{ age }}</p>
+      </div>
+    </div>
     <button type="submit" class="btn btn-submit">Add Author</button>
   </form>
 </div>

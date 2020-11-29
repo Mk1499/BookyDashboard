@@ -11,7 +11,7 @@ import { getAuthors } from '../../Queries/getAuthors.query';
 export class ShowAuthorsComponent implements OnInit {
 
   authors:any[] = [] ; 
-  loading: boolean;
+  loading: boolean = true;
 
   private querySubscription: Subscription;
 

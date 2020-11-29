@@ -14,6 +14,8 @@ import { ShowAuthorsComponent } from './Components/show-authors/show-authors.com
 import { AuthorCardComponent } from './Components/author-card/author-card.component';
 import { HomeComponent } from './Pages/home/home.component';
 import { AddAuthorComponent } from './Components/add-author/add-author.component';
+import { AddBookComponent } from './Components/add-book/add-book.component';
+import { GenreCardComponent } from './Components/genre-card/genre-card.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { AddAuthorComponent } from './Components/add-author/add-author.component
     ShowAuthorsComponent,
     AuthorCardComponent,
     HomeComponent,
-    AddAuthorComponent
+    AddAuthorComponent,
+    AddBookComponent,
+    GenreCardComponent
   ],
   imports: [
     BrowserModule,

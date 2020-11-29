@@ -14,31 +14,41 @@
   box-shadow: 0 0 11px rgba(0, 0, 0, 0.3);
   width: 70%;
 }
-.input{
-    background-color: #404e67;
-    border-color: #dcdcdc;
-    color:#dcdcdc; 
-    font-family: Cairo;
+.input {
+  background-color: #404e67;
+  border-color: #dcdcdc;
+  color: #dcdcdc;
+  font-family: Cairo;
+}
+
+.dropDown {
+  padding-top: 0;
 }
 
 .btn-submit {
   background-color: #fe2d53;
-  color:#dcdcdc; 
-  font-family: 'Courier New', Courier, monospace;
+  color: #dcdcdc;
+  font-family: "Courier New", Courier, monospace;
   border-radius: 1vh;
   margin-top: 1vh;
   width: 20%;
 }
 
-.authorView {
+.bookView {
   margin-top: 3%;
   margin-left: 20vw;
 }
 
-.authorView .cover {
+.bookView .cover {
   height: 30vh;
 }
 
 .card-text{
+    font-family: Cairo;
+
+}
+label{
+    color:#fff; 
+    float: left;
     font-family: Cairo;
 }
