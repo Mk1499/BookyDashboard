@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Apollo } from 'apollo-angular';
 import { getAuthorsGenres } from '../../Queries/getAuthorsGenres.query';
 import { addBook } from '../../Mutations/addBook.mutation';
+import { AngularFireStorage } from '@angular/fire/storage'
 
 @Component({
   selector: 'app-add-book',
@@ -23,10 +24,14 @@ export class AddBookComponent implements OnInit {
   buyURL: string = "";
   downloadURL: string = "";
   rate: number;
+  loadPercent: number;
+  imgUploading: boolean = false;
+
+  coverPath: string;
 
 
 
-  constructor(private apollo: Apollo) {
+  constructor(private apollo: Apollo, private af: AngularFireStorage) {
     apollo.watchQuery<any>({
       query: getAuthorsGenres,
 
@@ -41,18 +46,41 @@ export class AddBookComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  uploadImg(poster) {
+    console.log("POSTER : ", poster.target.files[0]);
+    let file = poster.target.files[0];
+    let filePath = "covers/img" + Math.random() + ".png";
+    let task = this.af.upload(filePath, file);
+    let ref = this.af.ref(filePath);
+    this.imgUploading = true;
+
+    task.percentageChanges().subscribe(res => {
+      console.log("load : ", res);
+      this.loadPercent = parseInt(res + "");
+      if (res == 100) {
+        setTimeout(() => {
+          this.imgUploading = false;
+          ref.getDownloadURL().subscribe(path => {
+            console.log("URL : ", path);
+            this.posterURL = path;
+          });
+        }, 500)
+      }
+    });
+  }
+
   addBook() {
 
 
-    console.log("name : ",this.name);
-    console.log("genre : ",this.genre);
-    console.log("authorID: ",this.authorID);
-    console.log("description : ",this.description);
-    console.log("Download : ",this.downloadURL);
-    console.log("releaseDate : ",this.releaseDate);
-    console.log("rate : ",this.rate);
-    console.log("read : ",this.readURL);
-    console.log("buy : ",this.buyURL);
+    console.log("name : ", this.name);
+    console.log("genre : ", this.genre);
+    console.log("authorID: ", this.authorID);
+    console.log("description : ", this.description);
+    console.log("Download : ", this.downloadURL);
+    console.log("releaseDate : ", this.releaseDate);
+    console.log("rate : ", this.rate);
+    console.log("read : ", this.readURL);
+    console.log("buy : ", this.buyURL);
 
     this.apollo.mutate({
       mutation: addBook,
@@ -71,14 +99,14 @@ export class AddBookComponent implements OnInit {
     }).subscribe(({ data }) => {
       console.log("Adding boook RES :  ", data);
       alert("book added success")
-      this.name="";
-      this.genre="";
-      this.authorID="";
-      this.description="";
-      this.downloadURL=""; 
-      this.rate=null;
-      this.readURL="";
-      this.releaseDate="";
+      this.name = "";
+      this.genre = "";
+      this.authorID = "";
+      this.description = "";
+      this.downloadURL = "";
+      this.rate = null;
+      this.readURL = "";
+      this.releaseDate = "";
     })
   }
 }

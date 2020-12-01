@@ -21,6 +21,19 @@
   font-family: Cairo;
 }
 
+.form-control-file.uploadBtn{
+  width: 50%;
+  margin-left: 7%;
+  margin-right: 7%;
+
+
+}
+.loadingInd{
+  color: #dcdcdc;
+  font-family: Cairo;
+}
+
+
 .dropDown {
   padding-top: 0;
 }

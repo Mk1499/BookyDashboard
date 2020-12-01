@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Apollo } from 'apollo-angular';
 import { getBooks } from '../../Queries/getBooks.query';
@@ -8,7 +8,7 @@ import { getBooks } from '../../Queries/getBooks.query';
   templateUrl: './show-books.component.html',
   styleUrls: ['./show-books.component.css']
 })
-export class ShowBooksComponent implements OnInit {
+export class ShowBooksComponent implements OnInit  {
 
   loading: boolean = true;
   books: any[] = [];
@@ -27,7 +27,4 @@ export class ShowBooksComponent implements OnInit {
     })
   }
 
-  ngOnDestroy() {
-    this.querySubscription.unsubscribe();
-  }
 }

@@ -13,12 +13,12 @@
         </a>
       </li>
       <li class="nav-item" [class]="activePage === 'genres' ? 'active' : ''">
-        <a class="nav-link" (click)="changePage('genres')" href="#">
+        <a class="nav-link" (click)="changePage('genres')" routerLink="/genres">
           <i class="fas fa-puzzle-piece"></i>Genres
         </a>
       </li>
       <li class="nav-item" [class]="activePage === 'users' ? 'active' : ''">
-        <a class="nav-link" href="#" (click)="changePage('users')"
+        <a class="nav-link" routerLink="/users" (click)="changePage('users')"
           ><i class="fas fa-users"></i>Users
         </a>
       </li>

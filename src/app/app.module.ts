@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import {AngularFireModule} from '@angular/fire'; 
+import {AngularFireStorageModule} from '@angular/fire/storage';
+import {environment} from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +19,8 @@ import { HomeComponent } from './Pages/home/home.component';
 import { AddAuthorComponent } from './Components/add-author/add-author.component';
 import { AddBookComponent } from './Components/add-book/add-book.component';
 import { GenreCardComponent } from './Components/genre-card/genre-card.component';
+import { ShowGenresComponent } from './Components/show-genres/show-genres.component';
+import { ShowUsersComponent } from './Components/show-users/show-users.component';
 
 @NgModule({
   declarations: [
@@ -29,14 +34,18 @@ import { GenreCardComponent } from './Components/genre-card/genre-card.component
     HomeComponent,
     AddAuthorComponent,
     AddBookComponent,
-    GenreCardComponent
+    GenreCardComponent,
+    ShowGenresComponent,
+    ShowUsersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     GraphQLModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
