@@ -3,6 +3,7 @@ import { Apollo } from 'apollo-angular';
 import { getAuthorsGenres } from '../../Queries/getAuthorsGenres.query';
 import { addBook } from '../../Mutations/addBook.mutation';
 import { AngularFireStorage } from '@angular/fire/storage'
+import {TranslateService} from '@ngx-translate/core'; 
 
 @Component({
   selector: 'app-add-book',
@@ -31,7 +32,7 @@ export class AddBookComponent implements OnInit {
 
 
 
-  constructor(private apollo: Apollo, private af: AngularFireStorage) {
+  constructor(private apollo: Apollo, private af: AngularFireStorage, private translate:TranslateService) {
     apollo.watchQuery<any>({
       query: getAuthorsGenres,
 

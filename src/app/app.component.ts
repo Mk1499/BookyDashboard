@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'BookyDB';
+  currentLang: string = localStorage.getItem('lang');
+  direction: string = localStorage.getItem('dir');
+  // rootStyle = document.querySelector(":root");
+
+  constructor(private translate: TranslateService) {
+    let language = this.currentLang ? this.currentLang : 'en';
+    let dir = this.direction ? this.direction : 'ltr';
+    localStorage.setItem("lang", language);
+    translate.setDefaultLang(language);
+
+    document.documentElement.style.setProperty('--dir', dir);
+  }
+
+
+
 }

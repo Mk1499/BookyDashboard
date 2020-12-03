@@ -1,3 +1,5 @@
+@import '../../app.component.css'; 
+
 .formCont {
   width: 83vw;
   display: flex;
@@ -6,6 +8,7 @@
   /* justify-content: center; */
   margin-top: 5%;
   height: 90vh;
+  direction: var(--dir);
 }
 .form {
   background-color: #404e67;
@@ -13,6 +16,9 @@
   border-radius: 1vw;
   box-shadow: 0 0 11px rgba(0, 0, 0, 0.3);
   width: 70%;
+}
+.form .btn{
+  font-family: Cairo;
 }
 .input {
   background-color: #404e67;
@@ -45,6 +51,9 @@
   border-radius: 1vh;
   margin-top: 1vh;
   width: 20%;
+}
+.form-group label{
+  float: var(--float);
 }
 
 .bookView {

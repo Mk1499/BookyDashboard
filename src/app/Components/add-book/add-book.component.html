@@ -6,11 +6,11 @@
         class="form-control input"
         name="name"
         [(ngModel)]="name"
-        placeholder="Book Name"
+        [placeholder]="'bookName' | translate"
       />
     </div>
     <div class="form-group">
-      <label>Author</label>
+      <label>{{'author' | translate}}</label>
       <select
         class="form-control input dropDown"
         id="authorName"
@@ -23,7 +23,7 @@
       </select>
     </div>
     <div class="form-group">
-      <label>Genre</label>
+      <label>{{'genre' | translate}}</label>
       <select
         class="form-control input dropDown"
         id="Genre"
@@ -38,7 +38,7 @@
       </select>
     </div>
     <div class="form-group">
-      <label>Release Date</label>
+      <label>{{'releaseDate' | translate}}</label>
       <input
         type="number"
         min="1899"
@@ -62,10 +62,16 @@
     </div> -->
 
     <div class="form-group">
-      <label for="poster">Poster</label>
-      <input type="file" #poster (change)="uploadImg($event)" accept="*.png.jpg" class="input uploadBtn form-control-file" id="poster">
-      <p class="loadingInd" *ngIf="imgUploading">{{loadPercent}}%</p>
-   
+      <label for="poster">{{'poster' | translate}}</label>
+      <input
+        type="file"
+        #poster
+        (change)="uploadImg($event)"
+        accept="*.png.jpg"
+        class="input uploadBtn form-control-file"
+        id="poster"
+      />
+      <p class="loadingInd" *ngIf="imgUploading">{{ loadPercent }}%</p>
     </div>
 
     <div class="form-group">
@@ -74,7 +80,7 @@
         class="form-control input"
         name="downloadURL"
         [(ngModel)]="downloadURL"
-        placeholder="Download URL"
+        [placeholder]="'downloadURL' | translate"
       />
     </div>
     <div class="form-group">
@@ -83,7 +89,7 @@
         class="form-control input"
         name="buyURL"
         [(ngModel)]="buyURL"
-        placeholder="Buy URL"
+        [placeholder]="'buyURL' | translate"
       />
     </div>
     <div class="form-group">
@@ -92,7 +98,7 @@
         class="form-control input"
         name="readURL"
         [(ngModel)]="readURL"
-        placeholder="Read URL"
+        [placeholder]="'readURL' | translate"
       />
     </div>
     <div class="form-group">
@@ -101,13 +107,13 @@
         type="number"
         name="rate"
         [(ngModel)]="rate"
-        placeholder="Rate"
+        [placeholder]="'rate' | translate"
       />
     </div>
     <div class="form-group">
       <textarea
         class="form-control input"
-        placeholder="Description"
+        [placeholder]="'description' | translate"
         name="description"
         [(ngModel)]="description"
         rows="3"
@@ -122,6 +128,8 @@
       </div>
     </div>
 
-    <button type="submit" class="btn btn-submit">Add Book</button>
+    <button type="submit" class="btn btn-submit">
+      {{ "add" | translate }} {{ "book" | translate }}
+    </button>
   </form>
 </div>

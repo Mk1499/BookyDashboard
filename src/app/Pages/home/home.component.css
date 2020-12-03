@@ -1,14 +1,20 @@
 /* .empty{
     width: 15vw;
 } */
+@import '../../app.component.css'; 
+
+.container-fluid{
+    direction: var(--dir);
+}
 .content{
     width: 83.5vw;
     margin-top: 8vh;
-    display: flex;
+    /* display: flex; */
     max-height: 90vh;
     overflow: auto;
     /* margin-left: 13vw; */
     text-align: center;
+    direction: ltr;
 }
 
 .content::-webkit-scrollbar {

@@ -1,3 +1,5 @@
+@import '../../app.component.css'; 
+
 .bookyNav {
   display: flex;
   flex-direction: row;
@@ -9,6 +11,7 @@
   position: fixed;
   z-index: 10;
   background-color: #fff;
+  direction: var(--dir);
 }
 .searchInput {
   background-color: rgba(255, 255, 255, 0.1);
@@ -17,7 +20,8 @@
   color: #404e67;
   height: 100%;
   border-radius: 0;
-  width: 75vw;
+  font-family: Cairo;
+  width: 65vw;
 }
 .navbar-logo {
   background-color: #404e67;
@@ -28,6 +32,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  direction: ltr;
 }
 .logoImg {
   width: 2vw;
@@ -38,10 +43,20 @@
   text-align: center;
   justify-content: center;
   width: 10vw;
+  font-family: Cairo;
 }
 .signOut li a {
   color: #dcdcdc;
 }
 .navbar-brand{
   color:#dcdcdc
+}
+.langSelect{
+  background-color: transparent;
+  color: #dcdcdc;
+  font-family: Cairo;
+  font-size: small;
+}
+option{
+  color:#404e67; 
 }

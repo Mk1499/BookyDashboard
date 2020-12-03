@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2"
+  xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" target-language="ar" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="books" datatype="html">
+        <source> Books </source>
+        <target>الكتب</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/Components/sidebar/sidebar.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="authors" datatype="html">
+        <source>Authors</source>
+        <target>الكتاب</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/Components/sidebar/sidebar.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="genres" datatype="html">
+        <source> Genres </source>
+        <target>التصنيفات</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/Components/sidebar/sidebar.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="users" datatype="html">
+        <source> Users </source>
+        <target>المستخدمين</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/Components/sidebar/sidebar.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit" datatype="html">
+        <source>Edit</source>
+        <target>تعديل</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/Components/sidebar/sidebar.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="addBook" datatype="html">
+        <source> Add Book </source>
+        <target>أضف كتاب</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/Components/sidebar/sidebar.component.html</context>
+          <context context-type="linenumber">49,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="addAuthor" datatype="html">
+        <source> Add Author </source>
+        <target>أضف كاتب</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/Components/sidebar/sidebar.component.html</context>
+          <context context-type="linenumber">61,62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="addGenre" datatype="html">
+        <source> Add Genre </source>
+        <target>أضف تصنيف</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/Components/sidebar/sidebar.component.html</context>
+          <context context-type="linenumber">69,70</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
