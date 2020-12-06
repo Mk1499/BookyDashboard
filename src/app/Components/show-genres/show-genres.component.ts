@@ -2,6 +2,7 @@ import { Apollo } from 'apollo-angular';
 import { Component, OnInit,OnDestroy } from '@angular/core';
 import {Subscription} from 'rxjs';
 import {getGenres} from '../../Queries/getGenres.query';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-show-genres',
@@ -15,7 +16,7 @@ genres:any[] = [];
 private querySub : Subscription; 
 
 
-  constructor(private apollo : Apollo) { }
+  constructor(private apollo : Apollo, private titleService:Title) { }
 
   ngOnInit(): void {
   

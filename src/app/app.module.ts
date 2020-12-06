@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule , Title} from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {AngularFireModule} from '@angular/fire'; 
@@ -42,7 +42,7 @@ import { ShowUsersComponent } from './Components/show-users/show-users.component
     ShowUsersComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     GraphQLModule,
     HttpClientModule,
@@ -57,7 +57,7 @@ import { ShowUsersComponent } from './Components/show-users/show-users.component
       }
   })
   ],
-  providers: [],
+  providers: [Title],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
