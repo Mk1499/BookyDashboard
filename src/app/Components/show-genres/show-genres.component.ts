@@ -19,7 +19,7 @@ private querySub : Subscription;
   constructor(private apollo : Apollo, private titleService:Title) { }
 
   ngOnInit(): void {
-    
+  
     this.querySub = this.apollo.watchQuery<any>({
       query:getGenres
     }).valueChanges.subscribe(({data,loading}) => {

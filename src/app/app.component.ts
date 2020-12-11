@@ -8,14 +8,14 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent {
   title = 'Booky DB';
-  // currentLang: string = localStorage.getItem('lang');
-  // direction: string = localStorage.getItem('dir');
+  currentLang: string = localStorage.getItem('lang');
+  direction: string = localStorage.getItem('dir');
   // rootStyle = document.querySelector(":root");
 
   constructor(private translate: TranslateService ) {
-    let language =  'en';
-    // let dir = this.direction ? this.direction : 'ltr';
-    // localStorage.setItem("lang", language);
+    let language = this.currentLang ? this.currentLang : 'en';
+    let dir = this.direction ? this.direction : 'ltr';
+    localStorage.setItem("lang", language);
     translate.setDefaultLang(language);
 
     // document.documentElement.style.setProperty('--dir', dir);

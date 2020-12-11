@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'BookyDB'`, () => {
+  it(`should have as title 'BookyCopy'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('BookyDB');
+    expect(app.title).toEqual('BookyCopy');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('BookyDB app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('BookyCopy app is running!');
   });
 });

@@ -8,7 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class NavbarComponent implements OnInit {
 
-  currentLang: string ='en';
+  currentLang: string = localStorage.getItem('lang');
   // rootStyle: any = <HTMLElement>document.querySelector(":root");
 // 
 
@@ -29,8 +29,8 @@ export class NavbarComponent implements OnInit {
     // document.documentElement.style.setProperty('--dir', dir);
     // document.documentElement.style.setProperty('--float', float);
 
-    // localStorage.setItem('lang', targetLang);
-    // localStorage.setItem('dir', dir);
+    localStorage.setItem('lang', targetLang);
+    localStorage.setItem('dir', dir);
     this.translate.use(targetLang);
   }
 
