@@ -7,7 +7,9 @@ export const getUsers = gql`
             name
             email
             password
-            reads
+            reads{
+                time
+            }
         }
     }
 `;
