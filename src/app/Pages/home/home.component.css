@@ -1,16 +1,17 @@
 /* .empty{
     width: 15vw;
 } */
-@import '../../app.component.css'; 
+@import '../../app.component.css';
 
 .container-fluid{
     direction: var(--dir);
 }
 .content{
     width: 83.5vw;
-    margin-top: 8vh;
+    margin-top: 6vh;
+    padding-top: 2vh;
     /* display: flex; */
-    max-height: 90vh;
+    max-height: 94vh;
     overflow: auto;
     /* margin-left: 13vw; */
     text-align: center;

@@ -26,6 +26,7 @@ import { AddBookComponent } from './Components/add-book/add-book.component';
 import { GenreCardComponent } from './Components/genre-card/genre-card.component';
 import { ShowGenresComponent } from './Components/show-genres/show-genres.component';
 import { ShowUsersComponent } from './Components/show-users/show-users.component';
+import { IonicModule } from '@ionic/angular';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { ShowUsersComponent } from './Components/show-users/show-users.component
           useFactory: translateBrowserLoaderFactory,
           deps: [HttpClient , TransferState]
       }
-  })
+  }),
+    IonicModule.forRoot()
   ],
   providers: [Title],
   bootstrap: [AppComponent]

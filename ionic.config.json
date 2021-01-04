@@ -1,0 +1,10 @@
+{
+  "defaultProject": "BookyDB",
+  "projects": {
+    "BookyDB": {
+      "name": "BookyDB",
+      "integrations": {},
+      "type": "angular"
+    }
+  }
+}

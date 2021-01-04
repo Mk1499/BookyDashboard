@@ -1,5 +1,5 @@
 {
-  "name": "booky-db",
+  "name": "BookyDB",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -26,6 +26,10 @@
     "@angular/platform-server": "~11.0.0",
     "@angular/router": "~11.0.0",
     "@apollo/client": "^3.0.0",
+    "@capacitor/android": "^2.4.5",
+    "@capacitor/cli": "^2.4.5",
+    "@capacitor/core": "^2.4.5",
+    "@ionic/angular": "^5.5.2",
     "@nguniversal/express-engine": "^11.0.0",
     "@ngx-translate/core": "^13.0.0",
     "@ngx-translate/http-loader": "^6.0.0",
@@ -61,6 +65,7 @@
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~4.0.2"
+    "typescript": "~4.0.2",
+    "@ionic/angular-toolkit": "latest"
   }
 }

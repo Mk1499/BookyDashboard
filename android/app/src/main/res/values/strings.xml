@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">BookyDB</string>
+    <string name="title_activity_main">BookyDB</string>
+    <string name="package_name">com.scorpion.bookdb</string>
+    <string name="custom_url_scheme">com.scorpion.bookdb</string>
+</resources>

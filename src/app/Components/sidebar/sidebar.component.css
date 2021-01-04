@@ -7,7 +7,7 @@
 .sidebar {
   height: 93vh;
   background-color: #404e67;
-  width: 15vw;
+  /* width: 15vw; */
   /* position: fixed; */
   margin-top: 7vh;
   direction: var(--dir);
