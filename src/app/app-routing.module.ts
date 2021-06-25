@@ -7,20 +7,27 @@ import { HomeComponent } from './Pages/home/home.component';
 import { AddBookComponent } from './Components/add-book/add-book.component';
 import { ShowGenresComponent } from './Components/show-genres/show-genres.component';
 import { ShowUsersComponent } from './Components/show-users/show-users.component';
+import { PolicyComponent } from './Pages/policy/policy.component';
+import { LoginComponent } from './Pages/login/login.component';
+import { LoggedInOnlyGuard } from './Guards/LoggedIn.guard';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent , children:[
-    {path:'',component:ShowBooksComponent},
-    {path:'books',component:ShowBooksComponent},
-    {path:'authors',component:ShowAuthorsComponent},
-    {path:'genres',component:ShowGenresComponent},
-    {path:'users',component:ShowUsersComponent},
+  {
+    path: '', component: HomeComponent, children: [
+      { path: '', redirectTo: 'books', pathMatch: 'full' },
+      { path: 'books', component: ShowBooksComponent },
+      { path: 'authors', component: ShowAuthorsComponent },
+      { path: 'genres', component: ShowGenresComponent },
+      { path: 'users', component: ShowUsersComponent },
+      { path: 'addAuthor', component: AddAuthorComponent },
+      { path: 'addBook', component: AddBookComponent },
+    ],
+    canActivate: [LoggedInOnlyGuard]
+  },
+  { path: 'policy', component: PolicyComponent },
+  { path: 'login', component: LoginComponent },
+  { path: '**', redirectTo: 'books', pathMatch: 'full' }
 
-    {path:'addAuthor',component:AddAuthorComponent}, 
-    {path:'addBook',component:AddBookComponent}, 
-
-
-  ]}
 ];
 
 @NgModule({

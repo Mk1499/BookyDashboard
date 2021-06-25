@@ -1,9 +1,9 @@
-@import '../../app.component.css';
+@import "../../app.component.css";
 
 .bookyNav {
   display: flex;
   flex-direction: row;
-  height: 7vh;
+  height: 65px;
   padding-bottom: 0;
   box-shadow: 0 0 11px rgba(0, 0, 0, 0.3);
   width: 100vw;
@@ -22,7 +22,7 @@
   height: 100%;
   border-radius: 0;
   font-family: Cairo;
-  /* width: 65%; */
+  color: var(--main);
 }
 .navbar-logo {
   /* background-color: #404e67; */
@@ -49,15 +49,24 @@
 .signOut li a {
   color: #dcdcdc;
 }
-.navbar-brand{
-  color:#dcdcdc
+.navbar-brand {
+  color: #dcdcdc;
 }
-.langSelect{
+.langSelect {
   background-color: transparent;
   color: #dcdcdc;
   font-family: Cairo;
   font-size: small;
 }
-option{
-  color:#404e67;
+option {
+  color: #404e67;
+}
+
+.side {
+  display: flex;
+  min-width: 30%;
+  flex-direction: row-reverse;
+}
+.nav-link {
+  cursor: pointer;
 }

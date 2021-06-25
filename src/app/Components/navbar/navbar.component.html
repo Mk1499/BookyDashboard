@@ -10,22 +10,28 @@
     type="text"
     [placeholder]="'search' | translate"
     aria-label="Search"
+    *ngIf="searchBar"
+    [ngStyle]="{
+      'text-align': textAligh
+    }"
   />
-  <ul class="navbar-nav px-3 signOut">
-    <li class="nav-item text-nowrap">
-      <a class="nav-link" href="#">{{'signOut' | translate}}</a>
-    </li>
-  </ul>
-  <ul class="navbar-nav px-3 signOut">
-    <li class="nav-item text-nowrap">
-      <select
-        #lang
-        (change)="changeLang($event.target.value)"
-        class="langSelect form-control"
-      >
-        <option value="en" [selected]="currentLang === 'en'">English</option>
-        <option value="ar" [selected]="currentLang === 'ar'">العربية</option>
-      </select>
-    </li>
-  </ul>
+  <div class="side" *ngIf="sideMenu">
+    <ul class="navbar-nav px-3 signOut">
+      <li class="nav-item text-nowrap">
+        <a class="nav-link" (click)="logout()">{{ "signOut" | translate }}</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav px-3 signOut">
+      <li class="nav-item text-nowrap">
+        <select
+          #lang
+          (change)="changeLang($event.target.value)"
+          class="langSelect form-control"
+        >
+          <option value="en" [selected]="currentLang === 'en'">English</option>
+          <option value="ar" [selected]="currentLang === 'ar'">العربية</option>
+        </select>
+      </li>
+    </ul>
+  </div>
 </nav>

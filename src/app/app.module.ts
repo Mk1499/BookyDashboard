@@ -27,6 +27,8 @@ import { GenreCardComponent } from './Components/genre-card/genre-card.component
 import { ShowGenresComponent } from './Components/show-genres/show-genres.component';
 import { ShowUsersComponent } from './Components/show-users/show-users.component';
 import { IonicModule } from '@ionic/angular';
+import { PolicyComponent } from './Pages/policy/policy.component';
+import { LoginComponent } from './Pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { IonicModule } from '@ionic/angular';
     AddBookComponent,
     GenreCardComponent,
     ShowGenresComponent,
-    ShowUsersComponent
+    ShowUsersComponent,
+    PolicyComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

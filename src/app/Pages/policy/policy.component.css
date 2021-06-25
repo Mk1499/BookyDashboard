@@ -1,0 +1,7 @@
+@import '../../app.component.css';
+
+
+.container{
+  padding-inline: 2vw;
+  padding-block: 7vh;
+}
