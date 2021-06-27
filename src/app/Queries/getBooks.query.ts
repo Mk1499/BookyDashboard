@@ -3,7 +3,7 @@ import gql from 'graphql-tag';
 export const getBooks = gql`
     query{
         books{
-            id 
+            id
             name
             description
             posterURL
@@ -14,3 +14,19 @@ export const getBooks = gql`
           }
     }
 `;
+
+export const getPendingBooks = gql`
+    query{
+      pendingBooks{
+        id
+        name
+        description
+        posterURL
+        author{
+          id
+          name
+        }
+        readURL
+      }
+    }
+`

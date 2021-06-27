@@ -1,0 +1,58 @@
+<div *ngIf="loading === true" class="overlay">
+  <img src="../../../assets/images/loading.gif" class="loadImg" />
+</div>
+<div class="container">
+  <table class="table table-hover table-dark usersTable" *ngIf="books.length">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">{{ "poster" | translate }}</th>
+        <th scope="col">{{ "name" | translate }}</th>
+        <th scope="col">{{ "description" | translate }}</th>
+        <th scope="col">{{ "actions" | translate }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books; let i = index" class="tableRow">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>
+          <img
+            class="bookCover"
+            [src]="book.posterURL"
+            (click)="viewBook(book.readURL)"
+          />
+        </td>
+        <td>{{ book.name }}</td>
+        <td>
+          <p class="desc">
+            {{ book.description }}
+          </p>
+        </td>
+        <td>
+          <div class="actions">
+            <ion-spinner *ngIf="processing" class="spinner"></ion-spinner>
+            <button
+              class="btn btn-success"
+              (click)="changeStatus(book.id, 'approved')"
+              *ngIf="!processing"
+            >
+              Approve
+            </button>
+            <button
+              class="btn btn-danger"
+              (click)="changeStatus(book.id, 'rejected')"
+              *ngIf="!processing"
+            >
+              Reject
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="msgCont" *ngIf="!books.length">
+    <p class="msg">
+      {{ "noPendingBooks" | translate }}
+    </p>
+  </div>
+</div>

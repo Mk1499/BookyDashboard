@@ -1,0 +1,50 @@
+@import '../../app.component.css';
+.usersTable{
+    /* margin-left: 12vw; */
+    /* align-self : center; */
+    margin-top:5vh;
+    padding: 5%;
+    border-radius: 1%;
+}
+.container{
+    direction: var(--dir);
+    font-family: Cairo;
+}
+.overlay{
+    width: 82vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    margin-left: 1%;
+  }
+.bookCover{
+  width: 5vw;
+}
+.desc{
+  height: 10vh;
+  overflow: hidden;
+}
+.actions{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 10vh;
+}
+.btn{
+  margin-inline: 5px;
+}
+.spinner{
+  color:#fff
+}
+.msgCont{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.msg{
+  font-size: 3vw;
+  color:var(--main)
+}

@@ -10,6 +10,7 @@ import { ShowUsersComponent } from './Components/show-users/show-users.component
 import { PolicyComponent } from './Pages/policy/policy.component';
 import { LoginComponent } from './Pages/login/login.component';
 import { LoggedInOnlyGuard } from './Guards/LoggedIn.guard';
+import { PendingBooksComponent } from './Components/pending-books/pending-books.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,8 @@ const routes: Routes = [
       { path: 'users', component: ShowUsersComponent },
       { path: 'addAuthor', component: AddAuthorComponent },
       { path: 'addBook', component: AddBookComponent },
+      { path: 'pendingBooks', component: PendingBooksComponent },
+
     ],
     canActivate: [LoggedInOnlyGuard]
   },

@@ -30,7 +30,7 @@
         </a>
       </li>
     </ul>
-    <div *ngIf="userRole==='admin'">
+    <div *ngIf="userRole === 'admin'">
       <h6
         class="
           sidebar-heading
@@ -57,6 +57,12 @@
           <a class="nav-link" routerLink="/addAuthor">
             <i class="fas fa-user-plus"></i>
             <span>{{ "add" | translate }} {{ "author" | translate }} </span>
+          </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/pendingBooks">
+            <i class="fas fa-user-plus"></i>
+            <span>{{ "pendingBooks" | translate }} </span>
           </a>
         </li>
         <!-- <li class="nav-item" [class]="activePage === 'addGenre' ? 'active' : ''">
