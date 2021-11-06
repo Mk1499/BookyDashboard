@@ -5,11 +5,11 @@
 } */
 
 .sidebar {
-  height: 93vh;
+  height: 100vh;
   background-color: #404e67;
   /* width: 15vw; */
   /* position: fixed; */
-  margin-top: 7vh;
+  padding-top: 7vh;
   direction: var(--dir);
 }
 ul.menu {

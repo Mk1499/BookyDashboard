@@ -1,0 +1,35 @@
+.cont {
+  background-color: #fafafa;
+  height: 100vh;
+  padding-top: 10vh;
+}
+.container {
+}
+.imgCont {
+  text-align: end;
+}
+img {
+  height: 80vh;
+}
+.dataCont {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.images {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+a.linkImg img {
+  height: 10vh;
+  border-radius: 1vw;
+}
+h1 {
+  color: var(--main);
+  font-family: "Cairo";
+}
+
+p {
+  font-family: "Cairo";
+}

@@ -30,6 +30,7 @@ import { IonicModule } from '@ionic/angular';
 import { PolicyComponent } from './Pages/policy/policy.component';
 import { LoginComponent } from './Pages/login/login.component';
 import { PendingBooksComponent } from './Components/pending-books/pending-books.component';
+import { DownloadAppComponent } from './Pages/download-app/download-app.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { PendingBooksComponent } from './Components/pending-books/pending-books.
     ShowUsersComponent,
     PolicyComponent,
     LoginComponent,
-    PendingBooksComponent
+    PendingBooksComponent,
+    DownloadAppComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

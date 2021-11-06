@@ -25,5 +25,6 @@
   "reads": "عدد القراءات",
   "pendingBooks": "الكتب المنتظرة",
   "actions": "الأجرائات",
-  "noPendingBooks": "لا يوجد كتب فى قائمة الانتظار"
+  "noPendingBooks": "لا يوجد كتب فى قائمة الانتظار",
+  "downloadApp": "تحميل تطبيقنا"
 }
